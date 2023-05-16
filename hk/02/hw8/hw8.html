@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>可伸縮側欄</title>
+  <style>
+    #sidebar {
+      width: 200px;
+      height: 100%;
+      background-color: #f1f1f1;
+      position: fixed;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 20px;
+    }
+
+    #content {
+      margin-left: 200px;
+      padding: 16px;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+
+    .openbtn:hover {
+      background-color: #444;
+    }
+
+    .closebtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 25px;
+    }
+
+    #content.active {
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="sidebar">
+    <button class="closebtn" onclick="closeNav()">×</button>
+    <h2>Sidebar</h2>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+
+  <div id="content">
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+    <h1>主要內容</h1>
+    <p>胡劭家的網頁。</p>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("sidebar").style.width = "200px";
+      document.getElementById("content").classList.add("active");
+    }
+
+    function closeNav() {
+      document.getElementById("sidebar").style.width = "0";
+      document.getElementById("content").classList.remove("active");
+    }
+  </script>
+</body>
+</html>
