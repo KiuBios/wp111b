@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG绘制老鼠</title>
+  <style>
+    svg {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <svg width="200" height="200">
+    <circle cx="100" cy="100" r="50" fill="#c0c0c0" /> <!-- 老鼠身体 -->
+    <circle cx="80" cy="80" r="10" fill="black" /> <!-- 左眼 -->
+    <circle cx="120" cy="80" r="10" fill="black" /> <!-- 右眼 -->
+    <path d="M90,120 Q100,140 110,120" stroke="black" fill="transparent" /> <!-- 鼻子 -->
+    <path d="M90,150 Q100,160 110,150" stroke="black" fill="transparent" /> <!-- 嘴巴 -->
+    <line x1="80" y1="140" x2="70" y2="180" stroke="black" /> <!-- 左耳朵 -->
+    <line x1="120" y1="140" x2="130" y2="180" stroke="black" /> <!-- 右耳朵 -->
+  </svg>
+</body>
+</html>
